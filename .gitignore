@@ -7,7 +7,7 @@ obj/
 import.log
 
 # Arquivos de configuração local
-config/config.local.json
+config/config.json
 
 # Arquivos de backup
 *~
