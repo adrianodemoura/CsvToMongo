@@ -1,8 +1,0 @@
-{
-	"mongodb_host": "127.0.0.1",
-	"mongodb_port": 27017,
-	"mongodb_database": "bigdata",
-	"mongodb_collection": "pessoas",
-	"mongodb_username": "root",
-	"mongodb_password": "Mongo6701!"
-}
