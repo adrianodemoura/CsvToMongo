@@ -58,10 +58,10 @@ O arquivo `config/config.json` contém as configurações do projeto:
 {
     "mongodb_host": "127.0.0.1",
     "mongodb_port": 27017,
-    "mongodb_database": "telefonesonline",
-    "mongodb_collection": "pessoas",
-    "mongodb_username": "root",
-    "mongodb_password": "Mongo6701!",
+    "mongodb_database": "",
+    "mongodb_collection": "",
+    "mongodb_username": "",
+    "mongodb_password": "!",
     "max_threads": 8,
     "memory_limit_percent": 70
 }
