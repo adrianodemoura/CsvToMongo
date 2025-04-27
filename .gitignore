@@ -1,0 +1,53 @@
+# Diretórios de compilação
+bin/
+obj/
+
+# Arquivos de log
+*.log
+import.log
+
+# Arquivos de configuração local
+config/config.local.json
+
+# Arquivos de backup
+*~
+*.bak
+*.swp
+
+# Arquivos de IDE/Editor
+.vscode/
+.idea/
+*.o
+*.a
+*.so
+*.dylib
+
+# Arquivos de debug
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Arquivos de dependências
+*.d
+*.deps
+
+# Arquivos de teste
+*.test
+*.out
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de dados
+*.csv
+!fields.txt
+
+# Arquivos de build
+build/
+dist/ 
