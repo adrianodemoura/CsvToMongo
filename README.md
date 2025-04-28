@@ -4,7 +4,7 @@ Este projeto é um script em C para importar arquivos CSV para o MongoDB, com su
 
 ## Características
 
-- Importação de múltiplos arquivos CSV em paralelo
+- Importação de múltiplos arquivos CSV em paralelo (cada arquivo é processado por uma thread independente)
 - Controle de uso de memória RAM (configurável)
 - Controle de número de threads (configurável)
 - Estrutura de dados otimizada para MongoDB
@@ -199,7 +199,7 @@ Os logs são salvos no arquivo `import.log` e incluem:
 
 - Campos de email e telefone são agrupados em uma subcoleção `contatos`
 - Os arquivos CSV devem seguir o padrão `pagina_NNNN.csv`
-- O número máximo de threads é limitado a 16 (definido no código fonte como `MAX_THREADS`). Este limite foi estabelecido para evitar sobrecarga do sistema e garantir um processamento eficiente dos arquivos CSV em paralelo.
+- O número máximo de threads é limitado a 16 (definido no código fonte como `MAX_THREADS`). Cada thread processa um arquivo CSV independentemente, permitindo que até 16 arquivos sejam processados simultaneamente. Este limite foi estabelecido para evitar sobrecarga do sistema e garantir um processamento eficiente dos arquivos CSV em paralelo.
 
 ## Licença
 
