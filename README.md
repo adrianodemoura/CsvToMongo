@@ -126,21 +126,22 @@ O script importa os dados para o MongoDB com a seguinte estrutura:
     "sexo": "M",
     "cbo": "123456",
     "mae": "Maria da Silva",
-    "data_atualizacao": "2024-03-20",
+    "data_atualizacao": "20240320",
     "nota": "5",
     "banco": "001",
     "cpf_conjuge": "987.654.321-00",
     "serv_publico": "N",
     "data_obito": null,
-    "cidade": "São Paulo",
+    "cidade": "Belo Horizonte",
     "endereco": "Rua Exemplo, 123",
     "bairro": "Centro",
-    "cep": "01234-567",
-    "uf": "SP",
+    "cep": "31234-567",
+    "uf": "MG",
     "contatos": {
         "telefones": [
-            "11999999999",
-            "11988888888"
+            "31999999999",
+            "31988888888",
+            "31977777777"
         ],
         "emails": [
             "joao@email.com",
@@ -157,30 +158,30 @@ O arquivo `config/field_mapping.json` define como os campos do CSV são mapeados
 ```json
 {
     "fields": {
-        "cpf": 1,
-        "nome": 2,
-        "nasc": 3,
-        "renda": 4,
-        "affinity_score": 5,
-        "affinity_percent": 6,
-        "sexo": 7,
-        "cbo": 8,
-        "mae": 9,
-        "data_atualizacao": 10,
-        "nota": 11,
-        "banco": 12,
-        "cpf_conjuge": 13,
-        "serv_publico": 14,
-        "data_obito": 15,
-        "cidade": 16,
-        "endereco": 17,
-        "bairro": 18,
-        "cep": 19,
-        "uf": 20
+        "cpf": 2,
+        "nome": 3,
+        "nasc": 4,
+        "renda": 5,
+        "affinity_score": 6,
+        "affinity_percent": 7,
+        "sexo": 9,
+        "cbo": 10,
+        "mae": 11,
+        "data_atualizacao": 12,
+        "nota": 12,
+        "banco": 13,
+        "cpf_conjuge": 14,
+        "serv_publico": 15,
+        "data_obito": 16,
+        "cidade": 17,
+        "endereco": 18,
+        "bairro": 19,
+        "cep": 20,
+        "uf": 21
     },
     "contatos": {
-        "telefones": [21, 22, 23],
-        "emails": [24, 25]
+        "telefones": [22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+        "emails": [36]
     }
 }
 ```
@@ -196,10 +197,9 @@ Os logs são salvos no arquivo `import.log` e incluem:
 
 ## Limitações
 
-- O script só importa os campos listados no arquivo `fields.txt`
 - Campos de email e telefone são agrupados em uma subcoleção `contatos`
 - Os arquivos CSV devem seguir o padrão `pagina_NNNN.csv`
-- O número máximo de threads é limitado a 16
+- O número máximo de threads é limitado a 16 (definido no código fonte como `MAX_THREADS`). Este limite foi estabelecido para evitar sobrecarga do sistema e garantir um processamento eficiente dos arquivos CSV em paralelo.
 
 ## Licença
 
